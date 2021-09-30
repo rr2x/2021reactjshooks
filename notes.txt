@@ -1,0 +1,12 @@
+hooks = v16.8 react addition
+      = use class based react features on functional components
+      = avoid confusion on "this" keyword, and better minification
+      = reuse stateful logic
+      = organize logic in a component into reuseable isolated units
+
+
+>>> npx create-react-app h
+
+rules of hooks:
+- only call hooks at top level, never call inside loops, conditions or nested function
+- only call hooks from react functions
