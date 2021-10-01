@@ -10,3 +10,13 @@ hooks = v16.8 react addition
 rules of hooks:
 - only call hooks at top level, never call inside loops, conditions or nested function
 - only call hooks from react functions
+
+useState
+- add state to functional components
+- returns "current value" and "state setter function"
+
+
+useEffect
+- side effects in functional component
+- prevents repeating code (replaces componentDidMount, componentDidUpdate, componentWillUnmount)
+- execute function everytime after component renders
