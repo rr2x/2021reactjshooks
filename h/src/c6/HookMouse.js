@@ -14,6 +14,12 @@ function HookMouse() {
   useEffect(()=>{
     console.log('useEffect called');
     window.addEventListener('mousemove', logMousePosition)
+
+    return () => {
+      // clean up code
+      console.log('component unmounting code')
+      window.removeEventListener('mousemove', logMousePosition)
+    }
   },[]) // empty array tells to execute useEffect once, does not depend on any props or state
 
   return (
