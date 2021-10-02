@@ -35,6 +35,6 @@ javascript reducer example:
 
 
 useReduce
-- hook for state management, alternative to useState
+- hook for state management (limited only within the component), alternative to useState
 - if your state can be changed with multiple actions
-- slightly similar to redux
+- and also to track multiple state values
