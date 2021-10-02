@@ -20,3 +20,21 @@ useEffect
 - side effects in functional component
 - prevents repeating code (replaces componentDidMount, componentDidUpdate, componentWillUnmount)
 - execute function everytime after component renders
+
+
+useContext
+- similar to context api for class based components
+- simplifies consumption
+
+
+javascript reducer example:
+
+      const arr1 = [1,2]
+      const reducer = (accumulator, currentValue) => accumulator + currentValue
+      arr1.reduce(reducer, 1) //expected: 4
+
+
+useReduce
+- hook for state management, alternative to useState
+- if your state can be changed with multiple actions
+- slightly similar to redux
