@@ -38,3 +38,44 @@ useReduce
 - hook for state management (limited only within the component), alternative to useState
 - if your state can be changed with multiple actions
 - and also to track multiple state values
+
+
+
+useState vs useReducer  (when to use)
+
+useState if:
+- number, string, boolean
+- one or two state transitions
+- unrelated state transitions
+- no business logic
+- local state
+
+useReducer if:
+- object, array
+- too many state transitions
+- related state transitions
+- complex business logic (complex data transformation/manipulation)
+- global state (+ useContext)
+
+
+React.memo()
+- don't render if state or props did not changed
+- used during export of component
+
+
+useCallback
+- return memoized version of callback function that only changes if one of the dependencies changed
+
+useMemo
+- avoid expensive calculation if not needed
+- execute if dependency changed
+- returns a cached value
+
+
+difference of useCallback and useMemo
+
+      useCallback = caches the provided function instance itself
+                  = use if you want to cache a function
+
+      useMemo = invokes the provided function and caches the result
+              = use if you want to cache the result of an invoked function
