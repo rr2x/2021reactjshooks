@@ -27,14 +27,22 @@ import './App.css';
 // export const CountContext = React.createContext()
 
 // import DataFetchingOne from './c15/DataFetchingOne'
-import DataFetchingTwo from './c15/DataFetchingTwo'
+// import DataFetchingTwo from './c15/DataFetchingTwo'
+
+// import ParentComponent from './c16/ParentComponent'
+
+import Counter from './c17/Counter'
 
 const App = () => {
   // const [count, dispatch] = useReducer(reducer, initialState)
   return (
     <div className="App">
 
-      <DataFetchingTwo/>
+      <Counter />
+
+      {/* <ParentComponent /> */}
+
+      {/* <DataFetchingTwo/> */}
       {/* <DataFetchingOne /> */}
 
       {/* <CountContext.Provider
