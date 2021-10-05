@@ -79,3 +79,14 @@ difference of useCallback and useMemo
 
       useMemo = invokes the provided function and caches the result
               = use if you want to cache the result of an invoked function
+
+useRef
+- access DOM nodes within functional components
+- can also be used to store any mutable value, value will persist between rerenders
+- does not cause rerenders if value changed
+
+
+custom hooks
+- js function that starts with "use"
+- can call other built-in hooks
+- share logic (alternative to HOC and Render Props) to prevent code duplication
