@@ -31,14 +31,30 @@ import './App.css';
 
 // import ParentComponent from './c16/ParentComponent'
 
-import Counter from './c17/Counter'
+// import Counter from './c17/Counter'
+
+// import FocusInput from './c18/FocusInput'
+// import ClassTimer from './c18/ClassTimer'
+// import HookTimer from './c18/HookTimer'
+
+import DocTitleOne from './c19/DocTitleOne'
+import DocTitleTwo from './c19/DocTitleTwo';
+
 
 const App = () => {
   // const [count, dispatch] = useReducer(reducer, initialState)
   return (
     <div className="App">
 
-      <Counter />
+      <DocTitleOne />
+      <DocTitleTwo />
+
+      {/* <HookTimer />
+      <ClassTimer /> */}
+
+      {/* <FocusInput /> */}
+
+      {/* <Counter /> */}
 
       {/* <ParentComponent /> */}
 
