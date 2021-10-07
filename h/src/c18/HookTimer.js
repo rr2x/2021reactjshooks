@@ -7,13 +7,10 @@ const HookTimer = () => {
 
   useEffect(()=>{
 
-    intervalRef.current = setInterval(()=>{
-      setTimer(prevTimer => prevTimer + 1)
-    },1000)
+    intervalRef.current = setInterval(()=>setTimer(prevTimer => prevTimer + 1), 1000)
 
-    return () => {
-      clearInterval(intervalRef.current)
-    }
+    return () => clearInterval(intervalRef.current)
+
   },[])
 
   return (

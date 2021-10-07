@@ -11,28 +11,20 @@ function DataFetching() {
     const getData = async (postId) => {
       try {
         const res = await axios.get(`https://jsonplaceholder.typicode.com/posts/${postId}`)
-        setPost(prevPost => (prevPost = res.data))
+        setPost(res.data)
       } catch (e) {
         console.log(e.toString())
-        setPost(prevPost => (prevPost = null))
+        setPost(null)
       }
     }
 
     getData(idFromButtonClick)
   }, [idFromButtonClick])
 
-  const handleClick = () => setIdFromButtonClick(prevId => (prevId = id))
-
   return (
     <div>
-      <input
-        type="text"
-        value={id}
-        onChange={
-          e => setId(prevId => (prevId = e.target.value))
-        }
-      />
-      <button type="button" onClick={handleClick}>Fetch Post</button>
+      <input type="text" value={id} onChange={e => setId(e.target.value)} />
+      <button type="button" onClick={() => setIdFromButtonClick(id)}>Fetch Post</button>
       {post &&
         <ul>
           { <li key={post.id}>{post.title}</li> }

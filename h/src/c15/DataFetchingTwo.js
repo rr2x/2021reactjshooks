@@ -2,7 +2,9 @@ import React, { useReducer, useEffect } from 'react'
 import axios from 'axios'
 
 const initialState = {
-  loading: true, error: '', post: {}
+  loading: true,
+  post: {},
+  error: '',
 }
 
 const FETCH = Object.freeze({
@@ -25,9 +27,16 @@ const DataFetchingTwo = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/posts/1')
-      .then(res => dispatch({ type: FETCH.SUCCESS, payload: { data: res.data, error: ''} }))
-      .catch(err => dispatch({ type: FETCH.ERROR, payload: { data: {}, error: err.toString()} }))
+    const fetchData = async () => {
+      try {
+        const res = await axios.get('https://jsonplaceholder.typicode.com/posts/1')
+        dispatch({ type: FETCH.SUCCESS, payload: { data: res.data, error: ''} })
+      } catch (err) {
+        dispatch({ type: FETCH.ERROR, payload: { data: {}, error: err.toString()} })
+      }
+    }
+
+    fetchData()
   }, [])
 
   return (
