@@ -37,8 +37,13 @@ import './App.css';
 // import ClassTimer from './c18/ClassTimer'
 // import HookTimer from './c18/HookTimer'
 
-import DocTitleOne from './c19/DocTitleOne'
-import DocTitleTwo from './c19/DocTitleTwo';
+// import DocTitleOne from './c19/DocTitleOne'
+// import DocTitleTwo from './c19/DocTitleTwo';
+
+// import CounterOne from './c19/CounterOne'
+// import CounterTwo from './c19/CounterTwo'
+
+import UserForm from './c19/UserForm'
 
 
 const App = () => {
@@ -46,8 +51,13 @@ const App = () => {
   return (
     <div className="App">
 
-      <DocTitleOne />
-      <DocTitleTwo />
+      <UserForm />
+
+      {/* <CounterOne/>
+      <CounterTwo/> */}
+
+      {/* <DocTitleOne />
+      <DocTitleTwo /> */}
 
       {/* <HookTimer />
       <ClassTimer /> */}

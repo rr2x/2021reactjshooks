@@ -4,9 +4,7 @@ const FocusInput = () => {
 
   const inputRef = useRef(null)
 
-  useEffect(()=>{
-    inputRef.current.focus()
-  },[])
+  useEffect(()=>inputRef.current.focus(), [])
 
   return (
     <div>

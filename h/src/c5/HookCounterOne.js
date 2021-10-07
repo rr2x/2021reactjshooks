@@ -16,7 +16,7 @@ function HookCounterOne() {
         type="text"
         value={name}
         onChange={
-          e => setName(prevName => (prevName = e.target.value))
+          e => setName(prevName => e.target.value)
         }
       />
       <button
